@@ -1,0 +1,976 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C97E91F4-B310-44E2-9B6C-96775395722D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>RdlEngine</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>RdlEngine</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SignAssembly>false</SignAssembly>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Barcode128c\BarCode128.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Action.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\ImageQualityManager.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Core Report Items\Pages\HTML Text\PageTextHtml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Core Report Items\Pages\HTML Text\PageTextHtmlCmdLexer.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Core Report Items\Pages\HTML Text\PageTextHtmlLexer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Core Report Items\Pages\Pages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Custom\CustomReportItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Custom\ICustomReportItem.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Axis\Axis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Axis\AxisTickMarks.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Core Report Items\Body.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Axis\CategoryAxis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Colletion type\Category\CategoryGroupings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Chart.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Types of Charts\ChartBar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Base\Chart\ChartBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Types of Charts\ChartBubble.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Types of Charts\ChartColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Data\ChartData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Enums\ChartElementOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\ChartExpression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\ChartGridLines.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Base\Chart\ChartLayout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Types of Charts\ChartLine.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Enums\ChartPalette.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Types of Charts\ChartPie.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Data\ChartSeries.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Enums\ChartSubType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Enums\ChartType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\DataSets.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSource\DataSources.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\External Code\ReportClasses.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\External Code\Report Function Code\Code.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\External Code\Report Function Code\CodeModules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Grid type\Column\ColumnGroupings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSource\ConnectionProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Types of Charts\ChartMap.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Types of Charts\ChartMapData.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Report Parameters\ParameterLexer.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Textbox\DynamicExpression.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Matrix Items\Corner.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Custom.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Enums\DataElementOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Enums\DataElementStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Enums\DataInstanceElementOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Data Points\DataLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Data Points\DataLabelPosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Data Points\DataPoints.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\DataRegion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Report Parameters\Values\DataSetReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\DataSetsDefn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSource\DataSourceReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSource\DataSourcesDefn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\ReportLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\ReportStatic.cs" />
+    <Compile Include="Core\Report\StyleInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\GenericConstant.cs" />
+    <Compile Include="Render\Base\IPresent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\Base\IStreamGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\Base\StreamGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\CSV\DelimitedTextWriter.cs" />
+    <Compile Include="Render\CSV\RenderCsv.cs" />
+    <Compile Include="Render\Excel\ExcelValet.cs" />
+    <Compile Include="Render\Excel\RenderExcel.cs" />
+    <Compile Include="Render\HTML\OneFileStreamGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\HTML\RenderHtml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfCatalog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfElements.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfFont.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfOutline.cs" />
+    <Compile Include="Render\PDF\PdfPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\PdfPattern.cs" />
+    <Compile Include="Render\PDF\PdfUtility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\PDF\RenderPdf.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\RTF\RenderRtf.cs" />
+    <Compile Include="Render\TIF\RenderTif.cs" />
+    <Compile Include="Render\XML\MemoryStreamGen.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\XML\RenderXml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\Cogs %28static%29\DataType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Data Values\DataValues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Report Parameters\Values\DefaultValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Table\Table Items\Details.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Drillthrough\Drillthrough.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Drillthrough\DrillthroughParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Colletion type\Category\DynamicCategories.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Grid type\Column\DynamicColumns.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Grid type\Row\DynamicRows.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Colletion type\Series\DynamicSeries.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Image\EmbeddedImages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMF.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\Comment.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\DrawBase.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\DrawCurve.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\DrawEllipse.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\DrawLines.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\DrawPie.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\DrawRects.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\DrawString.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\FillEllipse.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\FillPie.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\FillPolygon.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFDrawingRecords\FillRects.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFObjects\EMFBrush.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFObjects\EMFFont.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFObjects\EMFPen.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFObjects\EMFStringFormat.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFRecordObject.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\EMFConverter\EMFRecords\EMFTransform\EMFSetPageTransform.cs" />
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Expression\Expression.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Expression\ExpressionType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Fields.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Filters\FilterOperator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Filters\Filters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Filters\FilterValues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Table\Table Items\Footer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Grouping\GroupEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Grouping\GroupExpressions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Grouping\Grouping.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Table\Table Items\Header.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Image\Image.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Image\ImageSizing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Image\ImageSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Legend\Legend.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Legend\LegendLayout.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Legend\LegendPosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Line.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\List.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Marker\Marker.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Marker\MarkerType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Matrix.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Matrix Items\Cells\MatrixCellDataElementOutput.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Matrix Items\Cells\MatrixCellEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Matrix Items\Cells\MatrixCells.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Matrix Items\MatrixColumns.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Matrix Items\MatrixEntry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Properties\MatrixLayoutDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Matrix\Matrix Items\MatrixRows.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Name.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\NameLookup.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Core Report Items\PageFooter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Core Report Items\PageHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Report Parameters\Values\ParameterValues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Plot Area\PlotArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Plot Area\PlotType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Queries\Query.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Queries\QueryColumn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Queries\QueryCommandType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Queries\QueryParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Parsers\RDLParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Rectangle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Base\ReportDefn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\ReportItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\ReportItems.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Base\ReportLink.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Report Parameters\ReportParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Grid type\Row\RowGroupings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data\DataSet\Rows.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\RSize.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Colletion type\Series\SeriesGroupings.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Sorting\SortDirection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Sorting\Sorting.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Colletion type\Category\StaticCategories.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Grid type\Column\StaticColumns.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Colletion type\StaticMember.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Grid type\Row\StaticRows.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Colletion type\Series\StaticSeries.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Style\Style.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Style\StyleBackgroundImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Style\StyleBackgroundImageSource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Style\StyleBorderColor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Style\StyleBorderStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Style\StyleBorderWidth.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Sub-Report\Subreport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Sub-Report\SubreportParameters.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Grid type\Subtotal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Common Components\Groupings\Grid type\SubtotalPosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Table\Table.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Table\Table Items\Rows\TableCells.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Table\Table Items\TableColumns.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Table\Table Items\TableGroups.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Table\Table Items\Rows\TableRows.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Textbox\Textbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\3D\ThreeDProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\3D\ThreeDPropertiesDrawingStyle.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\3D\ThreeDPropertiesProjectionMode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\3D\ThreeDPropertiesShading.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Title\Title.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Title\TitlePosition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Textbox\ToggleImage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Enums\TrueFalseAuto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Report Parameters\Values\ValidValues.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Data Regions\Chart\Items\Axis\ValueAxis.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Report Parameters\Values\Values.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Report\Report Objects\Report Items\Common Components\Visibility.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\Gears %28instance%29\LaxBinder.cs" />
+    <Compile Include="Functions\Binary\Plus\FunctionPlusInt32.cs" />
+    <Compile Include="Functions\Binary\Minus\FunctionMinusInt32.cs" />
+    <Compile Include="Functions\Aggregate\FunctionAggrArray.cs" />
+    <Compile Include="Render\HTML\HtmlConverter\TablePositioner.cs" />
+    <Compile Include="Utility\3rd Party Wraps\ZipWrap.cs" />
+    <Compile Include="Render\HTML\HtmlConverter\RenderHtmlTable.cs" />
+    <Compile Include="Utility\Cogs %28static%29\Assembly.cs" />
+    <Compile Include="Utility\Cogs %28static%29\Conversion.cs" />
+    <Compile Include="Utility\Cogs %28static%29\FileSystem.cs" />
+    <Compile Include="Utility\Cogs %28static%29\Xml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\Gears %28instance%29\CharReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Parsers\Expression Parser\Lexer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Parsers\Expression Parser\Parser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Parsers\Expression Parser\ParserException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Core\Parsers\Expression Parser\Tokens.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\Trash\Constant.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\Trash\ConstantBoolean.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\Trash\ConstantDateTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\Trash\ConstantDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\Trash\ConstantDouble.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\Trash\ConstantError.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\Trash\ConstantInteger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Constant\Trash\ConstantString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Financial\Financial.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Base\FunctionAggr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrAvg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrCount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrCountDistinct.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrCountRows.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrFirst.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrLast.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrLevel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrMax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrMin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrNext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrPrevious.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvAvg.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvCount.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvMax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvMin.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvStdev.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvStdevp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvSum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrRvVarp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrStdev.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrStdevp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrSum.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrVar.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\FunctionAggrVarp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\FunctionAnd.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Base\FunctionBinary.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Selection\FunctionChoose.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Code\FunctionCode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Code\FunctionCustomInstance.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Code\FunctionCustomStatic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Divide\FunctionDiv.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Divide\FunctionDivDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionExecutionTime.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\FunctionExp.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Fields\FunctionField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Fields\FunctionFieldCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Fields\FunctionFieldIsMissing.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\General Items\FunctionFormat.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Global\FunctionGlobalCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Selection\FunctionIif.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Minus\FunctionMinus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Minus\FunctionMinusDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\FunctionModulus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Multiply\FunctionMult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Multiply\FunctionMultDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Unary\FunctionNot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\FunctionOr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionPageNumber.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionParameterCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Plus\FunctionPlus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Plus\FunctionPlusDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Plus\FunctionPlusString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Relational Operators\FunctionRelopEQ.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Relational Operators\FunctionRelopGT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Relational Operators\FunctionRelopGTE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Relational Operators\FunctionRelopLT.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Relational Operators\FunctionRelopLTE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Binary\Relational Operators\FunctionRelopNE.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionReportFolder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionReportItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionReportName.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionReportParameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionReportParameterLabel.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Selection\FunctionSwitch.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\System\FunctionSystem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\General Items\FunctionTextbox.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Report Info\FunctionTotalPages.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Unary\FunctionUnaryMinus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Unary\FunctionUnaryMinusDecimal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Unary\FunctionUnaryMinusInteger.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\User\FunctionUserCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\User\FunctionUserID.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\User\FunctionUserLanguage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\General Items\ICacheData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\Identifier\Identifier.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\Aggregate\Identifier\IdentifierKey.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\IExpr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Functions\VB Functions\VBFunctions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\HTML\MhtConverter\MhtBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\HTML\MhtConverter\MhtWebClientLocal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\HTML\MhtConverter\MhtWebFile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Render\ProcessReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Runtime\RdlEngineConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\Cogs %28static%29\Measurement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
