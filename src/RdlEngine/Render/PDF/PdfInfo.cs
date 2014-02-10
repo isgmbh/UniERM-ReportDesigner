@@ -2,6 +2,8 @@
  * This file is part of UniERM ReportDesigner, based on reportFU by Josh Wilson,
  * the work of Kim Sheffield and the fyiReporting project. 
  * 
+ * © 2014 Inpro-Soft GmbH (http://www.unierm.de)
+ * 
  * Prior Copyrights:
  * _________________________________________________________
  * |Copyright (C) 2010 devFU Pty Ltd, Josh Wilson and Others|
@@ -47,8 +49,8 @@ namespace Reporting.Rdl
 		internal void SetInfo(string title,string author,string subject, string company)
 		{
 		    //REBADGE: Update fyiReporting references in PDF output
-			info=string.Format("\r\n{0} 0 obj<</ModDate({1})/CreationDate({1})/Title({2})/Creator(reportFU)"+
-				"/Author({3})/Subject ({4})/Producer(devFU Pty Ltd)/Company({5})>>\tendobj\t",
+			info=string.Format("\r\n{0} 0 obj<</ModDate({1})/CreationDate({1})/Title({2})/Creator(UniERM ReportDesigner)"+
+                "/Author({3})/Subject ({4})/Producer(Inpro-Soft GmbH)/Company({5})>>\tendobj\t",
 				this.objectNum,
 				GetDateTime(),
 				title==null?"":title,
