@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Inpro-Soft GmbH")]
-[assembly: AssemblyProduct("RDL Project")]
+[assembly: AssemblyProduct("UniERM ReportDesigner")]
 [assembly: AssemblyCopyright("© 2011-2013 Inpro-Soft GmbH, © 2010 devFU Pty Ltd, Josh Wilson and Others, Copyright (C) 2004-2008  fyiReporting Software, LLC")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		

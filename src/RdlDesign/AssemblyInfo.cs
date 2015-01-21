@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UniERM ReportDesigner")]
-[assembly: AssemblyCopyright("© 2011-2013 Inpro-Soft GmbH, © 2010 devFU Pty Ltd, Josh Wilson and Others, © 2004-2008  fyiReporting Software, LLC")]
+[assembly: AssemblyCopyright("© 2011-2015 Inpro-Soft GmbH, © 2010 devFU Pty Ltd, Josh Wilson and Others, © 2004-2008  fyiReporting Software, LLC")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
@@ -27,7 +27,7 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("4.4.0.2")]
+[assembly: AssemblyVersion("4.4.1")]
 
 //
 // In order to sign your assembly you must specify a key to use. Refer to the 

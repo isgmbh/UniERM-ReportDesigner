@@ -2,7 +2,7 @@
  * This file is part of UniERM ReportDesigner, based on reportFU by Josh Wilson,
  * the work of Kim Sheffield and the fyiReporting project.
  * 
- * © 2011 Inpro-Soft GmbH (http://www.unierm.de)
+ * © 2011 - 2015 Inpro-Soft GmbH (http://www.unierm.de)
  * 
  * Prior Copyrights:
  * _________________________________________________________
@@ -527,7 +527,8 @@ namespace Reporting.Rdl
                     // Check to see if previously loaded.  Many CustomReportItems share same CodeModule. 
                     Assembly[] allLoadedAss = AppDomain.CurrentDomain.GetAssemblies();
                     foreach (Assembly ass in allLoadedAss)
-                        if (ass.Location.EndsWith(codemodule, StringComparison.CurrentCultureIgnoreCase))
+                        // Added "!ass.IsDynamic" to prevent "NotSupportedException" of the property Location (new since framework 4.0) by new dynamic assemblies of the new .NET framework update (2015).
+                        if (!ass.IsDynamic && ass.Location.EndsWith(codemodule, StringComparison.CurrentCultureIgnoreCase))
                         {
                             la = ass;
                             break;

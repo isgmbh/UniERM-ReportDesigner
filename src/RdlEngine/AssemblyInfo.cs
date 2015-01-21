@@ -12,7 +12,7 @@ using System.Security;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("UniERM ReportDesigner")]
-[assembly: AssemblyCopyright("© 2012 Inpro-Soft GmbH, © 2010 devFU Pty Ltd, Josh Wilson and Others, © 2004-2008  fyiReporting Software, LLC")]
+[assembly: AssemblyCopyright("© 2012-2015 Inpro-Soft GmbH, © 2010 devFU Pty Ltd, Josh Wilson and Others, © 2004-2008  fyiReporting Software, LLC")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]		
 
@@ -27,7 +27,7 @@ using System.Security;
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
 
-[assembly: AssemblyVersion("4.4.0")]
+[assembly: AssemblyVersion("4.4.1.1")]
 [assembly: AllowPartiallyTrustedCallers]
 
 //

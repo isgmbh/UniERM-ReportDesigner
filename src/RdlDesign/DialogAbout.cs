@@ -2,7 +2,7 @@
  * This file is part of UniERM ReportDesigner, based on reportFU by Josh Wilson,
  * the work of Kim Sheffield and the fyiReporting project. 
  * 
- * © 2012-2013 Inpro-Soft GmbH (http://www.unierm.de)
+ * © 2011-2015 Inpro-Soft GmbH (http://www.unierm.de)
  * 
  * Prior Copyrights:
  * _________________________________________________________
@@ -64,7 +64,7 @@ namespace Reporting.RdlDesign
 
             tbLicense.Text = @"
 UniERM ReportDesigner generates reports defined using the Report Definition Language (RDL) specification.
-Copyright © 2011-2013 Inpro-Soft GmbH (http://www.unierm.de)
+Copyright © 2011-2015 Inpro-Soft GmbH (http://www.unierm.de)
 Copyright (c) 2010 devFU Pty Ltd, Josh Wilson and Others (http://reportfu.org)
 Copyright © 2004-2008 fyiReporting Software, LLC
 	

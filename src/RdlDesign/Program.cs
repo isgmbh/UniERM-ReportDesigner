@@ -46,7 +46,7 @@ namespace Reporting.RdlDesign
         {
             // Determine if an instance is already running?
             bool firstInstance;
-            string mName = "Local\\RdlDesigner440";         // !!!! warning  !!!! string needs to be changed with when release version changes
+            string mName = "Local\\RdlDesigner441";         // !!!! warning  !!!! string needs to be changed with when release version changes
             //   can't use Assembly in this context
             System.Threading.Mutex mutex = new System.Threading.Mutex(false, mName, out firstInstance);
 
